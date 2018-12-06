@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>演示隐藏和显示</title>
+    <script type="text/javascript" src="jquery/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/hide_show.js"></script>
+    <!-- 引入css外部文件时，rel="stylesheet"是必须的 -->
+    <link type="text/css" rel="stylesheet" href="css/hide_show.css">
+</head>
+<body>
+    <!--<p>hello</p>-->
+    <!--<button id="hide">隐藏</button>-->
+    <!--<button id="show">显示</button>-->
+    <!--<button id="toggle">隐藏/显示</button>-->
+
+
+    <!-- 实现一个动画效果 -->
+    <script>
+        for(var i = 0;i<5;i++){
+            $("<div></div>").appendTo(document.body);
+        }
+        $("div").click(function () {
+            $(this).hide(2000,function () {
+                $(this).remove();
+            });
+        });
+    </script>
+</body>
+</html>
